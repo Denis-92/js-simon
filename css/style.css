@@ -3,3 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titles {
+    text-align: center;
+    margin: 10% auto 2%;
+}
+
+#random-array,
+#user-array {
+    display: flex;
+    justify-content: center;
+}
+
+.slot-style {
+    border: 1px solid blue;
+    margin: 0 5px;
+    width: 5vh;
+    height: 5vh;
+    text-align: center;
+    padding: 1vh;
+
+}

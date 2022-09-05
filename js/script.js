@@ -25,3 +25,14 @@ Consigli del giorno:
 // INGREDIENTI:
 // MATH.FLOOR, MATH.RANDOM, QUERY.SELECTOR, CREATE.ELEMENT, TIMER, AGGIUNGI CLASSE PER "DISPAY NONE", PROMPT,
 // FORSE "INDEX OF" PER CONFRONTO INPUT CON RANDOM
+
+const newGameButton = document.getElementById('new-game');
+
+newGameButton.addEventListener('click', function () {
+    const randomArraySelected = pointArray('random-array');
+    makeUniqueRandom(5, 1, 100, randomArraySelected);
+
+    const userArraySelected = pointArray('user-array');
+    makeEmptyArray(5, userArraySelected);
+
+})
