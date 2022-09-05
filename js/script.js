@@ -27,12 +27,14 @@ Consigli del giorno:
 // FORSE "INDEX OF" PER CONFRONTO INPUT CON RANDOM
 
 const newGameButton = document.getElementById('new-game');
+let maxNumber = 100;
+let quantity = 5;
 
 newGameButton.addEventListener('click', function () {
     const randomArraySelected = pointArray('random-array');
-    makeUniqueRandom(5, 1, 100, randomArraySelected);
+    makeUniqueRandom(quantity, maxNumber, randomArraySelected);
 
     const userArraySelected = pointArray('user-array');
-    makeEmptyArray(5, userArraySelected);
+    makeEmptyArray(quantity, userArraySelected);
 
-})
+});

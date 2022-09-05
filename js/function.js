@@ -1,9 +1,9 @@
 console.log('JS FUNCTION OK!');
 
-// GENERATORE NUMERO CASUALE DA n A n
+// GENERATORE NUMERO CASUALE DA 1 A n
 
-function randomGenerator(receiveMin, receiveMax) {
-    return giveRandomNumber = Math.floor(Math.random() * receiveMax) + receiveMin;
+function randomGenerator(receiveMax) {
+    return giveRandomNumber = Math.floor(Math.random() * receiveMax) + 1;
 }
 
 // PUNTARE L'ARRAY
@@ -18,7 +18,7 @@ function pointArray(receiveIdArray) {
     return giveArraySelection;
 }
 
-// CREARE GLI SLOT DELL'ARRAY VUOTI
+// CREARE GLI SLOT DELL'ARRAY E INSERIRE L'INPUT DELL'UTENTE
 
 function makeEmptyArray(receiveQuantity, receiveArraySelection) {
     for (let i = 0; i < receiveQuantity; i++) {
@@ -27,11 +27,14 @@ function makeEmptyArray(receiveQuantity, receiveArraySelection) {
 
         createSlot.className = 'slot-style';
 
-        createSlot.innerHTML = ' ';
+        const userInput = parseInt(prompt('Inserisci numero da 1 a ' + maxNumber));
+
+        createSlot.innerHTML = userInput;
 
         receiveArraySelection.append(createSlot);
 
     }
+
 }
 
 // CREARE GLI SLOT DELL'ARRAY E INSERIRE NUMERI RANDOM
@@ -48,14 +51,14 @@ function makeArrayContent(receiveArraySelection, receiveRandomNumber) {
 
 // CREA n NUMERI CASUALI DIVERSI
 
-function makeUniqueRandom(receiveQuantity, receiveMin, receiveMax, receiveArraySelection) {
+function makeUniqueRandom(receiveQuantity, receiveMax, receiveArraySelection) {
 
     let i = 0;
     const giveArrayRandomized = [];
 
     do {
 
-        const randomNumber = randomGenerator(receiveMin, receiveMax);
+        const randomNumber = randomGenerator(receiveMax);
 
         while (!giveArrayRandomized.includes(randomNumber)) {
 
