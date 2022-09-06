@@ -49,7 +49,7 @@ newGameButton.addEventListener('click', function () {
 
         checkSolution(arrayInput, arraySolution);
 
-    }, userTime * convertToSeconds);
+    }, 2000/*userTime * convertToSeconds*/); //------------------TOGLI IL TIMER A 2 SECONDI PER DEBUG
 
 });
 

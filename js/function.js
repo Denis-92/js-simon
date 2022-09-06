@@ -21,20 +21,30 @@ function pointArray(receiveIdArray) {
 // CREARE GLI SLOT DELL'ARRAY E INSERIRE L'INPUT DELL'UTENTE - RESTITUISCE L'ARRAY CREATO
 
 function makeUserArray(receiveQuantity, receiveArraySelection) {
+
     const giveArrayUser = [];
-    for (let i = 0; i < receiveQuantity; i++) {
 
-        const createSlot = document.createElement('div');
+    let i = 0;
 
-        createSlot.className = 'slot-style';
+    while (i < receiveQuantity) {
 
         const userInput = parseInt(prompt('Inserisci numero da 1 a ' + maxNumber));
 
-        giveArrayUser[i] = userInput;
+        if (!isNaN(userInput) && !giveArrayUser.includes(userInput)) {
 
-        createSlot.innerHTML = userInput;
+            const createSlot = document.createElement('div');
 
-        receiveArraySelection.append(createSlot);
+            createSlot.className = 'slot-style';
+
+            giveArrayUser[i] = userInput;
+
+            createSlot.innerHTML = userInput;
+
+            receiveArraySelection.append(createSlot);
+
+            i++;
+
+        }
 
     }
 
