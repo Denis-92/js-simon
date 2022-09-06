@@ -62,6 +62,6 @@ span {
     background-color: red;
 }
 
-.hide-this {
-    display: none;
+#solution {
+    text-align: center;
 }

@@ -135,20 +135,25 @@ function checkSolution(receiveUserArray, receiveRandomArray) {
 
     let winPoints = 0;
 
+    let giveSolutionFeedback;
+
     for (let i = 0; i < receiveUserArray.length; i++) {
 
         const inputNumber = receiveUserArray[i];
 
         if (receiveRandomArray.includes(inputNumber)) {
             winPoints++;
+            //giveSolutionFeedback[i] = `Il numero ${inputNumber} è giusto!`;
             console.log(`Il numero ${inputNumber} è giusto!`);
         } else {
+            //giveSolutionFeedback[i] = `Il numero ${inputNumber} NON è corretto!`;
             console.log(`Il numero ${inputNumber} NON è corretto!`);
         }
 
     }
 
     console.log(`Hai totalizzato ${winPoints} punti!`);
+    return giveSolutionFeedback = `Hai totalizzato ${winPoints} punti!`;
 
 }
 

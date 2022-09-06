@@ -49,7 +49,13 @@ newGameButton.addEventListener('click', function () {
 
         revealSolution(randomArraySelected, arraySolution);
 
-        checkSolution(arrayInput, arraySolution);
+        const solutionFeedback = checkSolution(arrayInput, arraySolution);
+
+        const solutionSection = document.getElementById('solution');
+
+        solutionSection.innerHTML = '';
+
+        solutionSection.append(solutionFeedback);
 
     }, 2000/*userTime * convertToSeconds*/); //------------------TOGLI IL TIMER A 2 SECONDI PER DEBUG
 
