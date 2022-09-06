@@ -151,3 +151,13 @@ function checkSolution(receiveUserArray, receiveRandomArray) {
     console.log(`Hai totalizzato ${winPoints} punti!`);
 
 }
+
+// VISUALIZZA DI NUOVO LA SOLUZIONE
+
+function revealSolution(receiveRandomArraySelected, receiveArraySolution) {
+
+    for (let i = 0; i < receiveArraySolution.length; i++) {
+        makeArrayContent(receiveRandomArraySelected, receiveArraySolution[i]);
+    }
+
+}

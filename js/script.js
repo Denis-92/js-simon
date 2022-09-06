@@ -47,6 +47,8 @@ newGameButton.addEventListener('click', function () {
 
         const arrayInput = makeUserArray(quantity, userArraySelected);
 
+        revealSolution(randomArraySelected, arraySolution);
+
         checkSolution(arrayInput, arraySolution);
 
     }, 2000/*userTime * convertToSeconds*/); //------------------TOGLI IL TIMER A 2 SECONDI PER DEBUG
