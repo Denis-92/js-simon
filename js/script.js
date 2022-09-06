@@ -30,7 +30,11 @@ const convertToSeconds = 1000;
 
 const newGameButton = document.getElementById('new-game');
 
+let solutionSection = '';
+
 newGameButton.addEventListener('click', function () {
+
+    solutionSection.innerHTML = '';
 
     const randomArraySelected = pointArray('random-array');
 
@@ -51,9 +55,7 @@ newGameButton.addEventListener('click', function () {
 
         const solutionFeedback = checkSolution(arrayInput, arraySolution);
 
-        const solutionSection = document.getElementById('solution');
-
-        solutionSection.innerHTML = '';
+        solutionSection = document.getElementById('solution');
 
         solutionSection.append(solutionFeedback);
 
