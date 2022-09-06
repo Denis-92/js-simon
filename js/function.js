@@ -18,9 +18,10 @@ function pointArray(receiveIdArray) {
     return giveArraySelection;
 }
 
-// CREARE GLI SLOT DELL'ARRAY E INSERIRE L'INPUT DELL'UTENTE
+// CREARE GLI SLOT DELL'ARRAY E INSERIRE L'INPUT DELL'UTENTE - RESTITUISCE L'ARRAY CREATO
 
 function makeUserArray(receiveQuantity, receiveArraySelection) {
+    const giveArrayUser = [];
     for (let i = 0; i < receiveQuantity; i++) {
 
         const createSlot = document.createElement('div');
@@ -29,11 +30,15 @@ function makeUserArray(receiveQuantity, receiveArraySelection) {
 
         const userInput = parseInt(prompt('Inserisci numero da 1 a ' + maxNumber));
 
+        giveArrayUser[i] = userInput;
+
         createSlot.innerHTML = userInput;
 
         receiveArraySelection.append(createSlot);
 
     }
+
+    return giveArrayUser;
 
 }
 
@@ -76,8 +81,9 @@ function makeUniqueRandom(receiveQuantity, receiveMax, receiveArraySelection) {
 
 }
 
-// CAMBIA COLORE IN BASE A DIFFICOLTA'
 
+// CAMBIA COLORE IN BASE A DIFFICOLTA'
+// PIU' FACILE
 function changeColorDown(receiveParameterSelector) {
     if (receiveParameterSelector.className === 'hardest-color') {
         receiveParameterSelector.className = 'hard-color';
@@ -94,6 +100,7 @@ function changeColorDown(receiveParameterSelector) {
     }
 }
 
+// PIU' DIFFICILE
 function changeColorUp(receiveParameterSelector) {
     if (receiveParameterSelector.className === 'easy-color') {
         receiveParameterSelector.className = 'medium-color';
@@ -110,3 +117,6 @@ function changeColorUp(receiveParameterSelector) {
     }
 
 }
+
+
+// CONTROLLA NUMERI INSERITI

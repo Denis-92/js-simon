@@ -25,6 +25,7 @@ Consigli del giorno:
 // INGREDIENTI:
 // MATH.FLOOR, MATH.RANDOM, QUERY.SELECTOR, CREATE.ELEMENT, TIMER, AGGIUNGI CLASSE PER "DISPAY NONE", PROMPT,
 // FORSE "INDEX OF" PER CONFRONTO INPUT CON RANDOM
+
 const convertToSeconds = 1000;
 
 const newGameButton = document.getElementById('new-game');
@@ -36,8 +37,8 @@ newGameButton.addEventListener('click', function () {
 
     const userArraySelected = pointArray('user-array');
     setTimeout(function () {
-        randomArraySelected.className = 'hide-this';
-        makeUserArray(quantity, userArraySelected);
+        randomArraySelected.innerHTML = '';
+        const arrayInput = makeUserArray(quantity, userArraySelected);
     }, userTime * convertToSeconds);
 
 });

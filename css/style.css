@@ -20,6 +20,11 @@ header {
     justify-content: space-around;
 }
 
+.setting p,
+span {
+    font-size: 20px;
+}
+
 #random-array,
 #user-array {
     display: flex;
@@ -37,16 +42,16 @@ header {
 }
 
 .easy-color {
-    background-color: lightgreen;
+    background-color: yellow;
 }
 
 .medium-color {
-    background-color: lightseagreen;
+    background-color: lightgreen;
 }
 
 
 .medHard-color {
-    background-color: yellow;
+    background-color: lightblue;
 }
 
 .hard-color {
