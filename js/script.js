@@ -25,6 +25,7 @@ Consigli del giorno:
 // INGREDIENTI:
 // MATH.FLOOR, MATH.RANDOM, QUERY.SELECTOR, CREATE.ELEMENT, TIMER, AGGIUNGI CLASSE PER "DISPAY NONE", PROMPT,
 // FORSE "INDEX OF" PER CONFRONTO INPUT CON RANDOM
+const convertToSeconds = 1000;
 
 const newGameButton = document.getElementById('new-game');
 
@@ -33,10 +34,11 @@ newGameButton.addEventListener('click', function () {
     makeUniqueRandom(quantity, maxNumber, randomArraySelected);
 
     const userArraySelected = pointArray('user-array');
-    makeEmptyArray(quantity, userArraySelected);
+    setTimeout(function () {
+        makeUserArray(quantity, userArraySelected);
+    }, userTime * convertToSeconds);
 
 });
-
 
 // PARAMETRI DIFFICOLTA'
 
@@ -71,6 +73,12 @@ moreEasyButton.addEventListener('click', function () {
     const userTimeSelector = pointArray('user-timer');
     userTimeSelector.append(userTime);
 
+    changeColorDown(maxNumberSelector);
+
+    changeColorDown(quantitySelector);
+
+    changeColorDown(userTimeSelector);
+
 });
 
 // BOTTONE AUMENTA DIFFICOLTA'
@@ -90,5 +98,11 @@ lessEasyButton.addEventListener('click', function () {
 
     const userTimeSelector = pointArray('user-timer');
     userTimeSelector.append(userTime);
+
+    changeColorUp(maxNumberSelector);
+
+    changeColorUp(quantitySelector);
+
+    changeColorUp(userTimeSelector);
 
 });

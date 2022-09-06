@@ -35,3 +35,24 @@ header {
     padding: 1vh;
 
 }
+
+.easy-color {
+    background-color: lightgreen;
+}
+
+.medium-color {
+    background-color: lightseagreen;
+}
+
+
+.medHard-color {
+    background-color: yellow;
+}
+
+.hard-color {
+    background-color: orange;
+}
+
+.hardest-color {
+    background-color: red;
+}

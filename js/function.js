@@ -20,7 +20,7 @@ function pointArray(receiveIdArray) {
 
 // CREARE GLI SLOT DELL'ARRAY E INSERIRE L'INPUT DELL'UTENTE
 
-function makeEmptyArray(receiveQuantity, receiveArraySelection) {
+function makeUserArray(receiveQuantity, receiveArraySelection) {
     for (let i = 0; i < receiveQuantity; i++) {
 
         const createSlot = document.createElement('div');
@@ -73,5 +73,40 @@ function makeUniqueRandom(receiveQuantity, receiveMax, receiveArraySelection) {
     } while (i < receiveQuantity)
 
     return giveArrayRandomized;
+
+}
+
+// CAMBIA COLORE IN BASE A DIFFICOLTA'
+
+function changeColorDown(receiveParameterSelector) {
+    if (receiveParameterSelector.className === 'hardest-color') {
+        receiveParameterSelector.className = 'hard-color';
+    } else {
+        if (receiveParameterSelector.className === 'hard-color') {
+            receiveParameterSelector.className = 'medHard-color';
+        } else {
+            if (receiveParameterSelector.className === 'medHard-color') {
+                receiveParameterSelector.className = 'medium-color';
+            } else {
+                receiveParameterSelector.className = 'easy-color';
+            }
+        }
+    }
+}
+
+function changeColorUp(receiveParameterSelector) {
+    if (receiveParameterSelector.className === 'easy-color') {
+        receiveParameterSelector.className = 'medium-color';
+    } else {
+        if (receiveParameterSelector.className === 'medium-color') {
+            receiveParameterSelector.className = 'medHard-color';
+        } else {
+            if (receiveParameterSelector.className === 'medHard-color') {
+                receiveParameterSelector.className = 'hard-color';
+            } else {
+                receiveParameterSelector.className = 'hardest-color';
+            }
+        }
+    }
 
 }
