@@ -152,8 +152,19 @@ function checkSolution(receiveUserArray, receiveRandomArray) {
 
     }
 
-    console.log(`Hai totalizzato ${winPoints} punti!`);
-    return giveSolutionFeedback = `Hai totalizzato ${winPoints} punti!`;
+    if (winPoints === 1) {
+
+        console.log(`Hai totalizzato ${winPoints} punto!`);
+        return giveSolutionFeedback = `Hai totalizzato ${winPoints} punto!`;
+
+    } else {
+
+        console.log(`Hai totalizzato ${winPoints} punti!`);
+        return giveSolutionFeedback = `Hai totalizzato ${winPoints} punti!`;
+
+    }
+
+
 
 }
 
