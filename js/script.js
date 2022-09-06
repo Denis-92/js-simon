@@ -27,8 +27,6 @@ Consigli del giorno:
 // FORSE "INDEX OF" PER CONFRONTO INPUT CON RANDOM
 
 const newGameButton = document.getElementById('new-game');
-let maxNumber = 100;
-let quantity = 5;
 
 newGameButton.addEventListener('click', function () {
     const randomArraySelected = pointArray('random-array');
@@ -36,5 +34,61 @@ newGameButton.addEventListener('click', function () {
 
     const userArraySelected = pointArray('user-array');
     makeEmptyArray(quantity, userArraySelected);
+
+});
+
+
+// PARAMETRI DIFFICOLTA'
+
+let maxNumber = 50;
+const maxNumberSelector = pointArray('max-number');
+maxNumberSelector.append(maxNumber);
+
+let quantity = 5;
+const quantitySelector = pointArray('quantity-numbers');
+quantitySelector.append(quantity);
+
+let userTime = 30;
+const userTimeSelector = pointArray('user-timer');
+userTimeSelector.append(userTime);
+
+
+// BOTTONE ABBASSA DIFFICOLTA'
+
+const moreEasyButton = document.getElementById('more-easy');
+
+moreEasyButton.addEventListener('click', function () {
+    if (maxNumber > 40) { maxNumber -= 10; }
+    if (quantity > 4) { quantity--; }
+    if (userTime < 35) { userTime += 5; }
+
+    const maxNumberSelector = pointArray('max-number');
+    maxNumberSelector.append(maxNumber);
+
+    const quantitySelector = pointArray('quantity-numbers');
+    quantitySelector.append(quantity);
+
+    const userTimeSelector = pointArray('user-timer');
+    userTimeSelector.append(userTime);
+
+});
+
+// BOTTONE AUMENTA DIFFICOLTA'
+
+const lessEasyButton = document.getElementById('less-easy');
+
+lessEasyButton.addEventListener('click', function () {
+    if (maxNumber < 80) { maxNumber += 10; }
+    if (quantity < 8) { quantity++; }
+    if (userTime > 15) { userTime -= 5; }
+
+    const maxNumberSelector = pointArray('max-number');
+    maxNumberSelector.append(maxNumber);
+
+    const quantitySelector = pointArray('quantity-numbers');
+    quantitySelector.append(quantity);
+
+    const userTimeSelector = pointArray('user-timer');
+    userTimeSelector.append(userTime);
 
 });

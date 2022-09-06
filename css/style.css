@@ -15,6 +15,11 @@ header {
     margin: 10% auto 2%;
 }
 
+.setting {
+    display: flex;
+    justify-content: space-around;
+}
+
 #random-array,
 #user-array {
     display: flex;
