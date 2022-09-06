@@ -119,4 +119,25 @@ function changeColorUp(receiveParameterSelector) {
 }
 
 
-// CONTROLLA NUMERI INSERITI
+// CONTROLLO NUMERI INDOVINATI
+
+function checkSolution(receiveUserArray, receiveRandomArray) {
+
+    let winPoints = 0;
+
+    for (let i = 0; i < receiveUserArray.length; i++) {
+
+        const inputNumber = receiveUserArray[i];
+
+        if (receiveRandomArray.includes(inputNumber)) {
+            winPoints++;
+            console.log(`Il numero ${inputNumber} è giusto!`);
+        } else {
+            console.log(`Il numero ${inputNumber} NON è corretto!`);
+        }
+
+    }
+
+    console.log(`Hai totalizzato ${winPoints} punti!`);
+
+}

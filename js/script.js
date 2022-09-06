@@ -31,14 +31,24 @@ const convertToSeconds = 1000;
 const newGameButton = document.getElementById('new-game');
 
 newGameButton.addEventListener('click', function () {
+
     const randomArraySelected = pointArray('random-array');
+
     const arraySolution = makeUniqueRandom(quantity, maxNumber, randomArraySelected);
+
     console.log('soluzione', arraySolution);
 
+
     const userArraySelected = pointArray('user-array');
+
     setTimeout(function () {
+
         randomArraySelected.innerHTML = '';
+
         const arrayInput = makeUserArray(quantity, userArraySelected);
+
+        checkSolution(arrayInput, arraySolution);
+
     }, userTime * convertToSeconds);
 
 });
