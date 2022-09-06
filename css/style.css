@@ -56,3 +56,7 @@ header {
 .hardest-color {
     background-color: red;
 }
+
+.hide-this {
+    display: none;
+}

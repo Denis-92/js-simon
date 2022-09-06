@@ -31,10 +31,12 @@ const newGameButton = document.getElementById('new-game');
 
 newGameButton.addEventListener('click', function () {
     const randomArraySelected = pointArray('random-array');
-    makeUniqueRandom(quantity, maxNumber, randomArraySelected);
+    const arraySolution = makeUniqueRandom(quantity, maxNumber, randomArraySelected);
+    console.log('soluzione', arraySolution);
 
     const userArraySelected = pointArray('user-array');
     setTimeout(function () {
+        randomArraySelected.className = 'hide-this';
         makeUserArray(quantity, userArraySelected);
     }, userTime * convertToSeconds);
 
